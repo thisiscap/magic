@@ -14,21 +14,22 @@ body {
 
 html {
   background-color: rgb(15, 12, 35);
+  font-size: 16px;
 }
 
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  padding: 2.5rem;
   perspective: 800px;
 }
 
 /* Responses */
 
 #response-container {
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  max-width: 400px;
 }
 
 #response-inner {
@@ -59,11 +60,29 @@ body {
 #response {
   display: block;
   padding: 10% 18% 0;
-  font-size: 210%;
+  font-size: calc(18.5px + (34 - 18.5) * ((100vw - 300px) / (480 - 300)) );
+}
+
+@media screen and (min-width:480px) {
+  #response {
+    font-size: 34px;
+  }
 }
 
 /* Animation */
 
+@keyframes fadeAndBlur {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
 #response-container {
-  animation: responseAnimation 3s;
+  /* Random transformAndScale (set in JS) */
+  animation: transformAndScale 3s, fadeAndBlur 3s;
 }
