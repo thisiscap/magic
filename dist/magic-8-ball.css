@@ -115,4 +115,5 @@ body {
   /* Random transformAndScale (set in JS) */
   -webkit-animation: transformAndScale 3s, fadeAndBlur 3s;
   animation: transformAndScale 3s, fadeAndBlur 3s;
+  animation-fill-mode: forwards;
 }
