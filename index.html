@@ -1,37 +1,38 @@
 <!doctype html>
 <html class="no-js" lang="en-GB">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Magic 8 Ball</title>
-        <meta name="description" content="A digital magic 8 ball, made to replace my worn out physical one">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Magic 8 Ball</title>
+    <meta name="description" content="A digital magic 8 ball, made to replace my worn out physical one">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Favicons and icons -->
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎱</text></svg>">
+    <!-- Favicons and icons -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎱</text></svg>" />
+    <!-- PWA -->
+    <meta name="theme-color" content="#0F0C23">
+    <link rel="manifest" href="../assets/manifest.json">
 
-        <!-- PWA -->
-        <meta name="theme-color" content="#0F0C23">
-        <link rel="manifest" href="../assets/manifest.json">
+    <!-- Magic 8 Ball CSS -->
+    <link rel="stylesheet" href="/dist/magic-8-ball.css">
 
-        <!-- Magic 8 Ball CSS -->
-        <link rel="stylesheet" href="/dist/magic-8-ball.css">
+</head>
 
-    </head>
+<body>
 
-    <body>
-
-        <div id="response-container">
-            <div id="response-inner">
-                <span id="response" class="response--waiting">
-                    <!-- Magic 8 Ball responses appear here --></span>
-            </div>
+    <div id="response-container">
+        <div id="response-inner">
+            <span id="response" class="response--waiting">
+                <!-- Magic 8 Ball responses appear here -->
+            </span>
         </div>
+    </div>
 
-        <!-- Magic 8 Ball JS -->
-        <script src="/dist/magic-8-ball.js"></script>
+    <!-- Magic 8 Ball JS -->
+    <script src="/dist/magic-8-ball.js"></script>
 
-    </body>
+</body>
 
 </html>
