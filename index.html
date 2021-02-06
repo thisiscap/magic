@@ -22,13 +22,16 @@
 
 <body>
 
-    <div id="response-container">
+    <div id="response-container" class="response--waiting">
         <div id="response-inner">
-            <span id="response" class="response--waiting">
+            <span id="response">
                 <!-- Magic 8 Ball responses appear here -->
             </span>
         </div>
     </div>
+
+    <a href="#" id="js-response-refresh" class="response-refresh" role="button"
+    aria-label="Get another response from the magic 8 ball.">Ask again</a>
 
     <!-- Magic 8 Ball JS -->
     <script src="/dist/magic-8-ball.js"></script>

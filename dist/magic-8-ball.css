@@ -128,8 +128,37 @@ body::after {
 }
 
 #response-container {
-  /* Random transformAndScale (set in JS) */
-  -webkit-animation: transformAndScale 3s, fadeAndBlur 3s;
-  animation: transformAndScale 3s, fadeAndBlur 3s;
   animation-fill-mode: forwards;
+}
+
+.response--ready {
+  /* transformAndScale is created in JS using randomised values */
+  animation: transformAndScale 3s, fadeAndBlur 3s;
+}
+
+a.response-refresh:link {
+  position: fixed;
+  bottom: 4rem;
+  padding: .5rem 1rem;
+  border-radius: 2rem;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 1.2em;
+  transition: box-shadow 1s ease-in-out .2s, color .25s ease-in;
+}
+
+a.response-refresh:visited {
+  color: inherit;
+}
+a.response-refresh:hover {
+  box-shadow: 0 0 1.5rem 1rem rgba(255,255,255,.4);
+}
+a.response-refresh:focus {
+  color: rgb(53, 66, 143);
+}
+a.response-refresh:active {
+  box-shadow: 0 0 1.5rem 1rem rgba(53,66,143,.4);
 }
